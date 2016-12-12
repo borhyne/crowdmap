@@ -1,50 +1,75 @@
-<div class="row">
-  <div class="col-xs-12 dc-data-count dc-chart" id="data-count">
-    <h2>Portland Trip
-      <small>
-        <span class="filter-count"></span> selected out of <span class="total-count"></span> places |
-         <a id="all" href="#">Start Over</a>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Trip Planner</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dc.css">
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+-->
+  <div class="row">
+    <div class="col-xs-12 dc-data-count dc-chart" id="data-count">
+      <h2>Portland Trip
+        <small>
+          <span class="filter-count"></span> selected out of <span class="total-count"></span> places |
+           <a id="all" href="#">Start Over</a>
           </span>
-       </small>
-    </h2>
+        </small>
+      </h2>
+    </div>
   </div>
-</div>
-<div class="row" id="control-row">
-  <div class="col-md-6">
-    <h4><a href="/form.html">Click here to add points</a></h4>
-    <div id="map" style="width: 100%; height: 300px"></div>
+  <div class="row" id="control-row">
+    <div class="col-md-6">
+      <h4><a href="/form.html">Click here to add points</a></h4>
+      <div id="map" style="width: 100%; height: 300px"></div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="dc-chart" id="chart-votecount"></div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="dc-chart" id="chart-visittime"></div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="dc-chart" id="chart-cost"></div>
+    </div>
   </div>
-  <div class="col-xs-6 col-md-3">
-    <div class="dc-chart" id="chart-votecount"></div>
+  <div class="row">
+    <div class="col-xs-12">
+      <table id="data-table" class="display table table-bordered table-striped" cellspacing="0" width="100%">
+        <thead>
+          <tr class="header">
+            <th>Name of Place</th>
+            <th>Who's Point?</th>
+            <th>Vote %</th>
+            <th>Why go here</th>
+            <th>Hours?</th>
+            <th>Cost?</th>
+            <th>Link to more info</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr class="header">
+            <th>Name of Place</th>
+            <th>Who's Point?</th>
+            <th>Vote %</th>
+            <th>Why go here</th>
+            <th>Hours?</th>
+            <th>Cost?</th>
+            <th>Link to more info</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   </div>
-  <div class="col-xs-6 col-md-3">
-    <div class="dc-chart" id="chart-visittime"></div>
+  <div class="row">
+  <a href="https://docs.google.com/spreadsheets/d/138dId0hhjY3rgnRI0rULEEhO8DM-LcLJ8MDM5CPTfgs/edit#gid=0">Click here to update votes</a>
+  <iframe src="https://docs.google.com/spreadsheets/d/138dId0hhjY3rgnRI0rULEEhO8DM-LcLJ8MDM5CPTfgs/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="200"></iframe>
   </div>
-  <div class="col-xs-6 col-md-3">
-    <div class="dc-chart" id="chart-cost"></div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <table id="data-table" class="display table table-bordered table-striped" cellspacing="0" width="100%">
-      <thead>
-        <tr class="header">
-          <th>Name of Place</th>
-          <th>Who's Point?</th>
-          <th>Vote %</th>
-          <th>Why go here</th>
-          <th>Hours?</th>
-          <th>Cost?</th>
-          <th>Link to more info</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
-</div>
-<div class="row">
-<a href="https://docs.google.com/spreadsheets/d/138dId0hhjY3rgnRI0rULEEhO8DM-LcLJ8MDM5CPTfgs/edit#gid=0">Click here to update votes</a>
-<iframe src="https://docs.google.com/spreadsheets/d/138dId0hhjY3rgnRI0rULEEhO8DM-LcLJ8MDM5CPTfgs/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="200"></iframe>
-</div>
 </div>
 
 <script type="text/javascript" >
