@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/borhyne/portland.git"
+    "url": "https://github.com/borhyne/blend.git"
   },
   "keywords": [
     "MEAN",
@@ -19,9 +19,9 @@
   "author": "Bo Rhyne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/borhyne/portland/issues"
+    "url": "https://github.com/borhyne/blend/issues"
   },
-  "homepage": "https://github.com/borhyne/portland",
+  "homepage": "https://github.com/borhyne/blend",
   "dependencies": {
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
