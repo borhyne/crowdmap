@@ -18,7 +18,7 @@ angular.module("contactsApp", ['ngRoute'])
                 controller: "EditContactController",
                 templateUrl: "contact.html"
             .when("/map", {
-                controller: "ListController",
+                controller: "MapController",
                 templateUrl: "map.html"    
             })
             .otherwise({
@@ -75,6 +75,11 @@ angular.module("contactsApp", ['ngRoute'])
     })
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
+    })
+    .controller("MapController", function($scope, $location) {
+        $scope.back = function() {
+            $location.path("#/");    
+        }
     })
     .controller("NewContactController", function($scope, $location, Contacts) {
         $scope.back = function() {
