@@ -1,3 +1,30 @@
+<div class = "row">
+  <div class="col-md-6">
+    <h2>
+      List of Points
+    </h2>
+  </div>
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-2">
+    <a style="margin-top:20px" class="btn btn-default" href="#/new/contact">New Map Point</a>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+<div class="container">
+  <table class="table table-hover">
+    <tbody>
+      <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
+        <td>
+          <a ng-href="#/contact/{{contact._id}}">{{ contact.firstName }} - {{ contact.lastName }}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--
 <div class="row">
   <div class="col-xs-12 dc-data-count dc-chart" id="data-count">
     <h2>Portland Trip
@@ -187,3 +214,5 @@ renderSpreadsheetData();
 
 </script>
 </body></html>
+
+-->
