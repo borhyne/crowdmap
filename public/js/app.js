@@ -17,6 +17,9 @@ angular.module("contactsApp", ['ngRoute'])
             .when("/contact/:contactId", {
                 controller: "EditContactController",
                 templateUrl: "contact.html"
+            .when("/map", {
+                controller: "ListController",
+                templateUrl: "map.html"    
             })
             .otherwise({
                 redirectTo: "/"
