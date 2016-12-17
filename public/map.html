@@ -7,8 +7,7 @@
     <div>
     <p>
       <label>Latitude, Longitude:</label> 
-      <input id="name" class="form-control" type="text" ng-model="contact.marker.lat = position.lat">
-      <input id="name" class="form-control" type="text" ng-model="contact.marker.lng = position.lng"> 
+      <input id="name" class="form-control" type="text" ng-model="contact.marker.lat = position.lat"><input id="name" class="form-control" type="text" ng-model="contact.marker.lng = position.lng">
     </p>
     <p>
       <label>Name of Place *</label> 
@@ -23,12 +22,14 @@
       <input id="name" class="form-control" type="text" ng-model="contact.marker.url" required> 
     </p>
     <p>
-      <label>What's your first name?</label> 
+      <label>Category?</label> 
       <input id="name" class="form-control" type="text" ng-model="contact.marker.entryname"> 
     </p>
     <p>
       <label>How long is the activity in hours?</label> 
-      <input id="name" class="form-control" type="text" ng-model="contact.marker.time"> 
+      <input id="name" class="form-control" type="text" ng-model="contact.marker.time">
+      <input id="name" class="form-control" ng-model="contact.marker.focus" = false>
+      <input id="name" class="form-control" ng-model="contact.marker.draggable" = false>
     </p>
     <p>
       <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Add New Point</button>
