@@ -1,7 +1,7 @@
-angular.module("contactsApp", ['ngRoute'])
+angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .config(function($routeProvider) {
         $routeProvider
-            .when("/", {
+            .when("/list", {
                 templateUrl: "list.html",
                 controller: "ListController",
                 resolve: {
@@ -11,12 +11,17 @@ angular.module("contactsApp", ['ngRoute'])
                 }
             })
             .when("/new/contact", {
-                controller: "NewContactController",
-                templateUrl: "contact-form.html"
+                controller: "MarkersSimpleController",
+                templateUrl: "map.html"
             })
             .when("/contact/:contactId", {
                 controller: "EditContactController",
                 templateUrl: "contact.html"
+            })
+            .when("/", {
+                controller: "MarkersSimpleController",
+                templateUrl: "map.html"
+            })
             .otherwise({
                 redirectTo: "/"
             })
@@ -71,15 +76,10 @@ angular.module("contactsApp", ['ngRoute'])
     })
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
-    })
-    .controller("MapController", function($scope, $location) {
+    })    
+    .controller('MarkersSimpleController', [ '$scope','$location', 'Contacts', function ($scope, $location, Contacts) {
         $scope.back = function() {
-            $location.path("#/");    
-        }
-    })
-    .controller("NewContactController", function($scope, $location, Contacts) {
-        $scope.back = function() {
-            $location.path("#/");
+            $location.path("#/contact");
         }
 
         $scope.saveContact = function(contact) {
@@ -90,7 +90,59 @@ angular.module("contactsApp", ['ngRoute'])
                 alert(response);
             });
         }
-    })
+
+        var mainMarker = 
+        {
+            "m1":{
+                "lat": 37.82632787689904,
+                "lng": -122.42271423339842,
+                "placename": "Alcatraz",
+                "description": "A must as a SF tourist. Make sure to get your tickets in advance",
+                "url": "http://www.history.com/topics/alcatraz",
+                "entryname": "Bo",
+                "time": "4",
+                "message": "Drag me to add point!",
+                "focus" : true,
+                "draggable": false
+            },
+            "m2":{
+                "lat": 37.81065700886835,
+                "lng": -122.47654080390929,
+                "message": "Drag me to add point!",
+                "focus" : true,
+                "draggable": true,
+                "placename": "Golden Gate Surfing",
+                "description": "Watch people surfing under the golden gate bridge!",
+                "url": "http://adventureblog.nationalgeographic.com/2016/01/19/surfing-under-the-golden-gate-bridge/",
+                "entryname": "Bo",
+                "time": "2"}
+            };
+
+        angular.extend($scope, {
+            sanfran: {
+                lat: 37.77,
+                lng: -122.44,
+                zoom: 12
+            },
+            markers: mainMarker,
+            position: {
+                lat: 37.77,
+                lng: -122.435
+            },
+            events: { // or just {} //all events
+                markers:{
+                    enable: [ 'dragend' ]
+                      //logic: 'emit'
+                }
+            }
+        });
+
+        $scope.$on("leafletDirectiveMarker.dragend", function(event, args){
+            $scope.position.lat = args.model.lat;
+            $scope.position.lng = args.model.lng;
+        });
+    }])
+
     .controller("EditContactController", function($scope, $routeParams, Contacts) {
         Contacts.getContact($routeParams.contactId).then(function(doc) {
             $scope.contact = doc.data;
@@ -100,7 +152,7 @@ angular.module("contactsApp", ['ngRoute'])
 
         $scope.toggleEdit = function() {
             $scope.editMode = true;
-            $scope.contactFormUrl = "contact-form.html";
+            $scope.contactFormUrl = "map.html";
         }
 
         $scope.back = function() {

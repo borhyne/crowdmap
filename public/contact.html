@@ -1,27 +1,21 @@
 <div class = "row">
   <div class="col-md-6">
     <h2>
-      {{ contact.firstName }} - {{ contact.lastName }}
+      {{ contact.marker.placename }} - {{ contact.marker.description }}
     </h2>
   </div>
   <div class="col-md-3">
   </div>
-  <div class="col-md-2">
-    <a href="#/"><button style="margin-top:20px" class="btn btn-default" ng-click="deleteContact(contact._id)">Delete</button></a>
-  </div>
-  <div class="col-md-1">
-  </div>
 </div>
 <div ng-hide="editMode" class="container">
   <div>
-    <p ng-if="contact.email">Link: {{ contact.email }}</a></p>
-    <p ng-if="contact.phone.mobile">Entry person: {{ contact.phone.mobile }} </p>
-    <p ng-if="contact.phone.work">Trip Length: {{ contact.phone.work }} hours</p>
-    <p ng-if="contact.address"> lat: {{ contact.address }} </p>
-    <p ng-if="contact.twitter"> lng: {{ contact.twitter }}</a></p>
+    <p ng-if="contact.marker.url">Link: {{ contact.marker.url }}</a></p>
+    <p ng-if="contact.marker.entryname">Entry person: {{ contact.marker.entryname }} </p>
+    <p ng-if="contact.marker.time">Trip Length: {{ contact.marker.time }} hours</p>
+    <p ng-if="contact.marker.lat"> lat: {{ contact.marker.lat }} </p>
+    <p ng-if="contact.marker.lng"> lng: {{ contact.marker.lng }}</a></p>
     <p>
-      <button style="margin-top:20px" class="btn btn-default" ng-click="toggleEdit()">Edit</button>
-      <a style="margin-top:20px" class="btn btn-default" href="#/">Back</a>
+      <a style="margin-top:20px" class="btn btn-default" href="#/">Back to Map</a>
     </p>
   </div>
 </div>

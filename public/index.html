@@ -6,29 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <title>Go!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- Angular lib -->
+    <script type="text/javascript" src="js/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-simple-logger.js"></script>
+    <script type="text/javascript" src="js/ui-leaflet-directive_dev_mapped.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-    <!--
-    <script type="text/javascript" src="js/d3.js"></script>
-    <script type="text/javascript" src="js/crossfilter.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.0-dev/dc.js"></script>
-    <script type="text/javascript" src="js/tabletop.js"></script>
-    <script type="text/javascript" src="js/leaflet.js"></script>
-    <script type="text/javascript" src="js/underscore-min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/dc.css">
-    <link rel="stylesheet" type="text/css" href="css/leaflet.css"> -->
-    
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css">
     <!-- Create some padding for body -->
     <style>
       body {
-        min-height: 2000px;
         padding-top: 70px;
       }
     </style>
@@ -41,12 +34,12 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <div class="navbar-brand" href="#/">Group Travel</div>
+          <div class="navbar-brand" href="#/">Where Next</div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#/">Home</a></li>
-            <li class="active"><a ng-href="#/map">Map</a></li>
+            <li class="active"><a ng-href="#/">Map</a></li>            
+            <li class="active"><a href="#/list">List</a></li>
           </ul>
         </div>
       </div>

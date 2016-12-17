@@ -1,0 +1,93 @@
+backup.json
+
+{
+    "_id": {
+        "$oid": "58539e283d2215001122c1d5"
+    },
+    "location": {
+        "lat": 37.82632787689904,
+        "lng": -122.42271423339842
+    },
+    "placename": "Alcatraz",
+    "description": "A must as a SF tourist. Make sure to get your tickets in advance",
+    "url": "http://www.history.com/topics/alcatraz",
+    "entryname": "Bo",
+    "time": "4",
+    "createDate": {
+        "$date": "2016-12-16T07:56:24.458Z"
+    }
+}
+
+{
+    "_id": {
+        "$oid": "5853a22a5e86120011aebb61"
+    },
+    "location": {
+        "lat": 37.81065700886835,
+        "lng": -122.47654080390929
+    },
+    "placename": "Golden Gate Surfing",
+    "description": "Watch people surfing under the golden gate bridge!",
+    "url": "http://adventureblog.nationalgeographic.com/2016/01/19/surfing-under-the-golden-gate-bridge/",
+    "entryname": "Bo",
+    "time": "2",
+    "createDate": {
+        "$date": "2016-12-16T08:13:30.406Z"
+    }
+}
+
+{
+    "_id": {
+        "$oid": "5853a55828abfa0011757088"
+    },
+    "location": {
+        "lat": 37.90032327590217,
+        "lng": -122.64930725097656
+    },
+    "placename": "Stinson Trail Hike",
+    "description": "An awesome day trip hike from Mill Valley to Stinson beach. Check out the details in the link!",
+    "url": "http://www.protrails.com/trail/364/san-francisco-marin-headlands-mt-tamalpais-point-reyes-dipsea-trail-mill-valley-to-stinson-beach",
+    "entryname": "Bo",
+    "time": "6",
+    "createDate": {
+        "$date": "2016-12-16T08:27:04.697Z"
+    }
+}
+
+{
+    "_id": {
+        "$oid": "5853aa72cf4c7b00116bb289"
+    },
+    "location": {
+        "lat": 37.860895414088155,
+        "lng": -122.43112564086914
+    },
+    "placename": "Angel Island",
+    "description": "Great day trip from SF. A little more off the beaten path than most touristy stuff, but easily accessible.",
+    "url": "http://welltraveledwife.com/2015/03/day-trip-to-angel-island.html",
+    "entryname": "Bo",
+    "time": "6",
+    "createDate": {
+        "$date": "2016-12-16T08:48:50.452Z"
+    }
+}
+
+{
+    "_id": {
+        "$oid": "5853ac5a1137f20011497bca"
+    },
+    "location": {
+        "lat": 37.59716402864859,
+        "lng": -122.50380277633667
+    },
+    "placename": "Surfing at Pacifica Beach",
+    "description": "Great waves for beginners. Nicest Taco Bell! and you can rent surfboards from nearby.",
+    "url": "http://surfandabide.com/san-francisco-surf-guide/",
+    "entryname": "Bo",
+    "time": "6",
+    "createDate": {
+        "$date": "2016-12-16T08:56:58.910Z"
+    },
+    "draggable": false
+}
+
