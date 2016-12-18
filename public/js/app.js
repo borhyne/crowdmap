@@ -106,7 +106,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             "time": "4",
             "message": "Drag me to add point!",
             "focus": "true",
-            "draggable": "false"
+            "draggable": false
         }
         };
 
