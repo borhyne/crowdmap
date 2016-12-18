@@ -77,7 +77,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', ['$scope','$location', 'Contacts', function ($scope, $location, Contacts) {
+    .controller('MarkersSimpleController', ['$scope','$location', 'Contacts', function ($scope, $location, Contacts, $http) {
         $scope.back = function() {
             $location.path("#/contact");
         }
@@ -90,8 +90,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 alert(response);
             });
         }
-
-        alert($http.get(url));
+        var testing = $http.get(url)
+        alert(testing);
         var wtf = "need a break"
 
         var comeon =
