@@ -92,8 +92,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
         
         var testing = null;
-        $scope.contacts = contacts.data;
-
+        
         var comeon =
         {
             "marker":{
