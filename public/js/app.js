@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        $scope.contacts = contacts.data;
+        $scope.contactsfind = Contacts1.data;
         var testing =
         {
             "marker":{
