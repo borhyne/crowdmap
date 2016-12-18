@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        $scope.contacts = Contacts.data;
+        $scope.contacts = Contacts._id;
         
         /*
         {
