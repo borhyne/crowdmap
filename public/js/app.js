@@ -91,7 +91,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        alert("whats going on");
+        $scope.contacts = contacts.data;
+        alert(contacts);
 
         var comeon =
         {
