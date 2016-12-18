@@ -74,9 +74,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 });
         }
     })
-    .controller("ListController", function(contacts, $scope) {
+    .controller("ListController", function(Contacts, $scope) {
         $scope.contacts = contacts.data;
-        alert(contacts);
     })    
     .controller('MarkersSimpleController', ['$scope','$location', 'Contacts', function ($scope, $location, Contacts) {
         $scope.back = function() {
