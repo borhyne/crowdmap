@@ -90,7 +90,27 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 alert(response);
             });
         }
-        var testing = $http.get("/contacts.marker");
+        var testing = 
+        {
+    "_id": {
+        "$oid": "5855fa53942137001165e01c"
+    },
+    "marker": {
+        "lat": 37.7798,
+        "lng": -122.43598,
+        "placename": "test",
+        "description": "testte",
+        "url": "tedrd",
+        "entryname": "fdfxghbv",
+        "time": "hcfc"
+    },
+    "createDate": {
+        "$date": "2016-12-18T02:54:11.583Z"
+    }
+};
+
+
+        $http.get("/contacts.marker");
         alert(testing);
 
         var comeon =
