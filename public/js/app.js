@@ -77,7 +77,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', [ '$scope','$location', 'Contacts', function ($scope, $location, Contacts) {
+    .controller('MarkersSimpleController', [ '$scope','$location', 'Contacts', function ($scope, $location, Contacts, contacts) {
         $scope.back = function() {
             $location.path("#/contact");
         }
@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        $scope.themarker = Contacts.data;
+        $scope.contacts = contacts.data;
         /*
         {
             "marker":{
@@ -126,7 +126,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: themarker,
+            markers: contacts,
             position: {
                 lat: 37.77,
                 lng: -122.435
