@@ -93,7 +93,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         var mainMarker = 
         {
-            "m1":{
+            "marker":{
                 "lat": 37.82632787689904,
                 "lng": -122.42271423339842,
                 "placename": "Alcatraz",
@@ -105,7 +105,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 "focus" : true,
                 "draggable": false
             },
-            "m2":{
+            "marker":{
                 "lat": 37.81065700886835,
                 "lng": -122.47654080390929,
                 "message": "Drag me to add point!",
