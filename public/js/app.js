@@ -77,13 +77,13 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', [ '$scope','$location', 'Contacts', function ($scope, $location, Contacts, contacts) {
+    .controller('MarkersSimpleController', [ '$scope','$location', 'contacts', function ($scope, $location, contacts) {
         $scope.back = function() {
             $location.path("#/contact");
         }
 
         $scope.saveContact = function(contact) {
-            Contacts.createContact(contact).then(function(doc) {
+            contacts.createContact(contact).then(function(doc) {
                 var contactUrl = "/contact/" + doc.data._id;
                 $location.path(contactUrl);
             }, function(response) {
