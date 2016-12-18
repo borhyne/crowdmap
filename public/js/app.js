@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        /*
+        var comeon =
         {
             "marker":{
                 "lat": 37.82632787689904,
@@ -117,7 +117,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 "entryname": "Bo",
                 "time": "2"}
             };
-            */
 
         angular.extend($scope, {
             sanfran: {
@@ -125,7 +124,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: $scope.contacts = contacts.data,
+            markers: comeon,
             position: {
                 lat: 37.77,
                 lng: -122.435
