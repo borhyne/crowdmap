@@ -91,6 +91,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
+        alert("whats going on");
+
         var comeon =
         {
             "marker":{
