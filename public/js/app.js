@@ -77,7 +77,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', function ($scope, $location, $http, Contacts1, contacts) {
+    .controller('MarkersSimpleController', function ($scope, $location, $http, Contacts1) {
         $scope.back = function() {
             $location.path("#/contact");
         }
@@ -92,25 +92,24 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
 
         $scope.Contacts1 = Contacts1.data;
-        var comeon = Contacts1.marker;
-        var testing =
-        {
-    "_id": {
-        "$oid": "5855fa53942137001165e01c"
-    },
-    "marker": {
-        "lat": 37.7798,
-        "lng": -122.43598,
-        "placename": "test",
-        "message": "Drag me to add point!",
-        "focus": true,
-        "draggable": true,
-        "description": "testte",
-        "url": "tedrd",
-        "entryname": "fdfxghbv",
-        "time": "hcfc"
-    }
-};
+
+        var testing = {
+            "_id": {
+                "$oid": "5855fa53942137001165e01c"
+            },
+                "marker": {
+                    "lat": 37.7798,
+                    "lng": -122.43598,
+                    "placename": "test",
+                    "message": "Drag me to add point!",
+                    "focus": true,
+                    "draggable": true,
+                    "description": "testte",
+                    "url": "tedrd",
+                    "entryname": "fdfxghbv",
+                    "time": "hcfc"
+                }
+            };
 
         angular.extend($scope, {
             sanfran: {
