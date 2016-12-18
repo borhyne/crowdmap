@@ -77,7 +77,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', ['$scope','$location', 'Contacts', '$http', function ($scope, $location, Contacts, $http, contacts) {
+    .controller('MarkersSimpleController', function ($scope, $location, Contacts, $http, contacts) {
         $scope.back = function() {
             $location.path("#/contact");
         }
@@ -142,7 +142,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             $scope.position.lat = args.model.lat;
             $scope.position.lng = args.model.lng;
         });
-    }])
+    })
 
     .controller("EditContactController", function($scope, $routeParams, Contacts) {
         Contacts.getContact($routeParams.contactId).then(function(doc) {
