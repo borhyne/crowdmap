@@ -93,6 +93,25 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         var mainMarker = 
         {
+            "_id": {
+                "$oid": "58545508734d1d3029c6cb0b"
+            },
+            "marker": {
+            "lat": 37.82632787689904,
+            "lng": -122.42271423339842,
+            "placename": "Alcatraz",
+            "description": "A must as a SF tourist. Make sure to get your tickets in advance",
+            "url": "http://www.history.com/topics/alcatraz",
+            "entryname": "Bo",
+            "time": "4",
+            "message": "Drag me to add point!",
+            "focus": "true",
+            "draggable": "false"
+        }
+        };
+
+        /*
+        {
             "marker":{
                 "lat": 37.82632787689904,
                 "lng": -122.42271423339842,
@@ -117,6 +136,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 "entryname": "Bo",
                 "time": "2"}
             };
+            */
 
         angular.extend($scope, {
             sanfran: {
