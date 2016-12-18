@@ -91,8 +91,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
         var testing = $http.get(/contacts/)
-        alert(testing);
-        var wtf = "need a break"
 
         var comeon =
         {
@@ -127,7 +125,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: comeon,
+            markers: testing,
             position: {
                 lat: 37.77,
                 lng: -122.435
