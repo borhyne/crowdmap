@@ -92,7 +92,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
         
         
-        var testing = $scope.contacts = contacts.data;
+        $scope.contacts = contacts.data;
 
         var comeon =
         {
