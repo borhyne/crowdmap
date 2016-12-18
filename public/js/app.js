@@ -92,7 +92,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
 
         var wtf = "need a break"
-        alert(contacts);
+        alert(contact);
 
         var comeon =
         {
