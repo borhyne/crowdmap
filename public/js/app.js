@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        var themarker = Contacts.data;
+        $scope.themarker = Contacts.data;
         /*
         {
             "marker":{
