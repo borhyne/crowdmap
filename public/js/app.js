@@ -91,8 +91,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        var wtf = "need a break here"
-        alert(wtf);
+        var wtf = "need a break"
+        alert(contacts);
 
         var comeon =
         {
