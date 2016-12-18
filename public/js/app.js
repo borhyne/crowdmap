@@ -5,8 +5,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 templateUrl: "list.html",
                 controller: "ListController",
                 resolve: {
-                    contacts: function(Contacts) {
-                        return Contacts.getContacts();
+                    contacts: function(Contacts1) {
+                        return Contacts1.getContacts();
                     }
                 }
             })
@@ -26,7 +26,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 redirectTo: "/"
             })
     })
-    .service("Contacts", function($http) {
+    .service("Contacts1", function($http) {
         this.getContacts = function() {
             return $http.get("/contacts").
                 then(function(response) {
@@ -77,7 +77,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', function ($scope, $location, $http, contacts) {
+    .controller('MarkersSimpleController', function ($scope, $location, $http, Contacts1, contacts) {
         $scope.back = function() {
             $location.path("#/contact");
         }
@@ -143,8 +143,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         });
     })
 
-    .controller("EditContactController", function($scope, $routeParams, Contacts) {
-        Contacts.getContact($routeParams.contactId).then(function(doc) {
+    .controller("EditContactController", function($scope, $routeParams, Contacts1) {
+        Contacts1.getContact($routeParams.contactId).then(function(doc) {
             $scope.contact = doc.data;
         }, function(response) {
             alert(response);
@@ -161,12 +161,12 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
 
         $scope.saveContact = function(contact) {
-            Contacts.editContact(contact);
+            Contacts1.editContact(contact);
             $scope.editMode = false;
             $scope.contactFormUrl = "";
         }
 
         $scope.deleteContact = function(contactId) {
-            Contacts.deleteContact(contactId);
+            Contacts1.deleteContact(contactId);
         }
     });
