@@ -90,7 +90,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 alert(response);
             });
         }
-        var testing = $http.get("/contacts.marker")
+        var testing = JSON.parse($http.get("/contacts.marker"));
         alert(testing);
 
         var comeon =
