@@ -94,6 +94,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         var testing = null;
         $http.get('/contacts').success(function(data) {
             testing = data;
+            alert(string(data));
         });
         
         var comeon =
