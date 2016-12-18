@@ -92,7 +92,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
 
         $scope.Contacts1 = Contacts1.data;
-        var comeon = Contacts1;
+        var comeon = Contacts1.marker;
         var testing =
         {
             "marker":{
