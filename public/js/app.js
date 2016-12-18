@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        $scope.Contacts1 = Contacts1.data;
+        $scope.Contacts1 = contacts.data;
         var testing =
         {
             "marker":{
@@ -125,7 +125,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: Contacts1.data,
+            markers: contacts.data,
             position: {
                 lat: 37.77,
                 lng: -122.435
