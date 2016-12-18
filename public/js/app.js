@@ -95,30 +95,22 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         var comeon = Contacts1.marker;
         var testing =
         {
-            "marker":{
-                "lat": 37.82632787689904,
-                "lng": -122.42271423339842,
-                "placename": "Alcatraz",
-                "description": "A must as a SF tourist. Make sure to get your tickets in advance",
-                "url": "http://www.history.com/topics/alcatraz",
-                "entryname": "Bo",
-                "time": "4",
-                "message": "Drag me to add point!",
-                "focus" : true,
-                "draggable": false
-            },
-            "marker1":{
-                "lat": 37.81065700886835,
-                "lng": -122.47654080390929,
-                "message": "Drag me to add point!",
-                "focus" : true,
-                "draggable": true,
-                "placename": "Golden Gate Surfing",
-                "description": "Watch people surfing under the golden gate bridge!",
-                "url": "http://adventureblog.nationalgeographic.com/2016/01/19/surfing-under-the-golden-gate-bridge/",
-                "entryname": "Bo",
-                "time": "2"}
-            };
+    "_id": {
+        "$oid": "5855fa53942137001165e01c"
+    },
+    "marker": {
+        "lat": 37.7798,
+        "lng": -122.43598,
+        "placename": "test",
+        "message": "Drag me to add point!",
+        "focus": true,
+        "draggable": true,
+        "description": "testte",
+        "url": "tedrd",
+        "entryname": "fdfxghbv",
+        "time": "hcfc"
+    }
+};
 
         angular.extend($scope, {
             sanfran: {
@@ -126,7 +118,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: comeon,
+            markers: testing,
             position: {
                 lat: 37.77,
                 lng: -122.435
