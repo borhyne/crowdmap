@@ -90,7 +90,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 alert(response);
             });
         }
-        var testing = "/contacts/";
+        var testing = "/contacts";
         
         var comeon =
         {
