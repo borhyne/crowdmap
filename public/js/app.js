@@ -91,7 +91,9 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        var mainMarker = 
+        var mainMarker = contact.data;
+        
+        /*
         {
             "_id": {
                 "$oid": "58545508734d1d3029c6cb0b"
@@ -110,7 +112,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
         };
 
-        /*
+        
         {
             "marker":{
                 "lat": 37.82632787689904,
