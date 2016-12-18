@@ -77,7 +77,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', [ '$scope','$location', 'contacts', function ($scope, $location, contacts) {
+    .controller('MarkersSimpleController', [ '$scope','$location', 'contacts', function ($scope, $location, Contacts) {
         $scope.back = function() {
             $location.path("#/contact");
         }
