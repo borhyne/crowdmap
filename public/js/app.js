@@ -114,7 +114,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                     $scope.help.push({
                         lat: data[i].marker.lat,
                         lng: data[i].marker.lng,
-                        message: data[i].marker.message,
+                        message: data[i].marker.message + " " + data[i].marker.message,
                         draggable: data[i].marker.draggable,
                         focus: data[i].marker.focus
                     })
