@@ -91,6 +91,14 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
+        requestNumber = JSONRequest.get("/contacts",
+                function (requestNumber, value, exception) {
+                    if (value) {processResponse(value);
+                    } else {processError(exception);
+                }
+            }
+        ); 
+
         var testing = {
             "_id": {
                 "$oid": "5855fa53942137001165e01c"
@@ -115,8 +123,9 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: function() {
-                return $http.get("/contacts").
+            markers: {function() {
+                return $http.get("/contacts");
+                };
             },
             position: {
                 lat: 37.77,
