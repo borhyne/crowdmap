@@ -112,13 +112,13 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         $http.get('/contacts').
             success(function(data, status, headers, config) {
-                return posts.data[0];
+                return posts.data;
             }).
             error(function(data, status, headers, config) {
             alert("problem");
         });
 
-        alert(JSON.stringify(posts.data[0]));        
+        alert(JSON.stringify(posts));        
 
         angular.extend($scope, {
             sanfran: {
