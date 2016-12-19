@@ -115,8 +115,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             alert("problem");
         });
 
-        $http.newMark = contacts.data;
-
         angular.extend($scope, {
             sanfran: {
                 lat: 37.77,
