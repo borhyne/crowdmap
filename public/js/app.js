@@ -109,7 +109,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         var dammit = $http.get('/contacts').
             success(function(data, status, headers, config) {
-                return data[0];
+                return response.data[0];
                 alert(JSON.stringify(posts));
             }).
             error(function(data, status, headers, config) {
