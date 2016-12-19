@@ -34,7 +34,9 @@
     </p>
     <p>
       <label>How long is the activity in hours?</label> 
-      <input id="name" class="form-control" type="number" ng-model="contact.marker.time">
+      <input id="name" class="form-control" type="number" min="0" max="12" ng-model="contact.marker.time">
+      <span ng-show="form.size.$error.integer">The value is not a valid integer!</span>
+      <span ng-show="form.size.$error.min || form.size.$error.max">The value must be in range 0 to 12 hours</span>
     </p>
     <p>
       <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Add New Point</button>
