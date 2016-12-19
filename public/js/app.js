@@ -39,7 +39,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             return $http.post("/contacts", contact).
                 then(function(response) {
                     return response;
-                };
+                });
         }
         this.getContact = function(contactId) {
             var url = "/contacts/" + contactId;
