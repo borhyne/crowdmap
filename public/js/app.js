@@ -39,6 +39,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             return $http.post("/contacts", contact).
                 then(function(response) {
                     return response;
+                }, function(response) {
+                    /*alert("Error creating contact.");*/
                 });
         }
         this.getContact = function(contactId) {
