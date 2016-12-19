@@ -113,7 +113,10 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 for (var i = 0; i < data.length; i++){
                     $scope.help.push({
                         lat: data[i].marker.lat,
-                        lng: data[i].marker.lng
+                        lng: data[i].marker.lng,
+                        message: data[i].marker.message,
+                        draggable: data[i].marker.draggable,
+                        focus: data[i].marker.focus
                     })
                 }
             });
