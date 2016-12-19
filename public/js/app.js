@@ -108,13 +108,13 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                     "time": "test"
                 }
             };
-        alert(JSON.stringify(testing, null, 4));
+        alert(testing);
 
         $http.get('/contacts').
             success(function(data, status, headers, config) {
                 var posts = data[0];
                 var formap = JSON.stringify(posts, null, 4);
-                alert("wtf");
+                alert(JSON.stringify(posts, null, 4));
             }).
             error(function(contact, status, headers, config) {
             alert("problem");
