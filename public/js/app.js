@@ -40,7 +40,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 then(function(response) {
                     return response;
                 }, function(response) {
-                    alert("Error creating contact.");
+                    /*alert("Error creating contact.");*/
                 });
         }
         this.getContact = function(contactId) {
