@@ -110,8 +110,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             };
 
         $http.get('/contacts').
-            success(function(contact, status, headers, config) {
-                var posts = contact;
+            success(function(data, status, headers, config) {
+                var posts = data;
             }).
             error(function(contact, status, headers, config) {
             alert("problem");
