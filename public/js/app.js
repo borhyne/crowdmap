@@ -122,8 +122,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             markers: $http.get('/contacts').
             success(function(data, status, headers, config) {
                 return data[0];
-                alert(JSON.stringify(help));
-            }),
+            });,
             position: {
                 lat: 37.77,
                 lng: -122.435
