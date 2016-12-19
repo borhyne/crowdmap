@@ -112,6 +112,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $http.get('/contacts').
             success(function(data, status, headers, config) {
                 var posts = data;
+                alert("success");
             }).
             error(function(contact, status, headers, config) {
             alert("problem");
@@ -123,7 +124,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: testing,
+            markers: posts,
             position: {
                 lat: 37.77,
                 lng: -122.435
