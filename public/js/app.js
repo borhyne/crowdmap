@@ -115,8 +115,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                         lat: data[i].marker.lat,
                         lng: data[i].marker.lng,
                         message: "<a href=#/contact/"+data[i]._id+">"+data[i].marker.placename+"</a>",
-                        draggable: data[i].marker.draggable,
-                        focus: true
+                        draggable: data[i].draggable,
+                        focus: data[i].focus
                     })
                 }
             });
@@ -125,7 +125,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             sanfran: {
                 lat: 37.77,
                 lng: -122.44,
-                zoom: 12
+                zoom: 10
             },
             markers: testing,
             position: {
