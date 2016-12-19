@@ -93,11 +93,10 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         requestNumber = 
             function() {
-                return $http.get("/contacts").then(function(response) {return response;
-                }, 
-                function(response) {
-                    alert("Error finding contacts.");
+                return $http.get("/contacts")
             };
+                
+
 
         var testing = {
             "_id": {
