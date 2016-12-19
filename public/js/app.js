@@ -108,6 +108,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                     "time": "test"
                 }
             }];
+        String jsonTesting = testing.replaceAll("[", "").testing.replaceAll("]", "");
 
         $http.get('/contacts').
             success(function(data, status, headers, config) {
