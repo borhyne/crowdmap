@@ -91,11 +91,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        requestNumber = 
-            function() {
-                return $http.get("/contacts")
-            };
-            
+        requestNumber = $http.points;
+
         var testing = {
             "_id": {
                 "$oid": "5855fa53942137001165e01c"
