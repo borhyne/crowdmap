@@ -112,7 +112,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 var help = data[0];
             });
 
-        var pleasework = $http.get('/contacts');
+        var pleasework = $http.get('/contacts').data;
         alert(JSON.stringify(pleasework));
 
         angular.extend($scope, {
