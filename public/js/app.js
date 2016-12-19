@@ -116,7 +116,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             alert("problem");
         });
 
-        alert(JSON.stringify(testing, null, 4)&JSON.stringify(posts, null, 4));
+        alert(JSON.stringify(testing, null, 4),JSON.stringify(posts, null, 4));
 
         angular.extend($scope, {
             sanfran: {
