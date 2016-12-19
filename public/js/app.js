@@ -85,7 +85,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $scope.saveContact = function(contact) {
             Contacts.createContact(contact).then(function(doc) {
                 var contactUrl = "/contact/" + doc.data._id;
-                $location.path(contactUrl);
+                $location.path("#/list");
             }, function(response) {
                 alert(response);
             });
@@ -94,7 +94,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         var testing = {
             "_id": "5855fa53942137001165e01c",
             "marker":{
-                "lat": 37.7798,
+                "lat": 37.7798
+                ,
                 "lng": -122.43598,
                 "placename": "test",
                 "message": "Drag me to add point!",
