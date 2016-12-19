@@ -115,6 +115,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             alert("problem");
         });
 
+        $http.posts = Contacts1.data;
+
         alert(JSON.stringify(posts, null, 4));
 
         angular.extend($scope, {
