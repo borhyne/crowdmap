@@ -115,8 +115,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             alert("problem");
         });
 
-        $http.newMark = Contacts1.data;
-        alert(newMark);
+        $http.newMark = contacts.data;
 
         angular.extend($scope, {
             sanfran: {
