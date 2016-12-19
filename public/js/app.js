@@ -91,13 +91,13 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        requestNumber = function($http) {
-            this.getContacts = function() {
-                    return $http.get("/contacts").then(function(response) {return response;
+        requestNumber = 
+            function() {
+                return $http.get("/contacts").then(function(response) {return response;
                 }, 
                 function(response) {
                     alert("Error finding contacts.");
-        };
+            };
 
         var testing = {
             "_id": {
