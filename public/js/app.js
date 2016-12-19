@@ -107,9 +107,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 }
             };
 
-        var comeon = $http.get('/contacts');
-        alert(JSON.stringify(comeon));
-
         var dammit = $http.get('/contacts').
             success(function(data, status, headers, config) {
                 return data[0];
@@ -118,6 +115,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             error(function(data, status, headers, config) {
             alert("problem");
         });
+
+        alert(JSON.stringify(dammit));
 
         angular.extend($scope, {
             sanfran: {
