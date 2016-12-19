@@ -22,6 +22,10 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 controller: "MarkersSimpleController",
                 templateUrl: "map.html"
             })
+            .when("/portland", {
+                controller: "MarkersSimpleController",
+                templateUrl: "portland.html"
+            })
             .otherwise({
                 redirectTo: "/"
             })
