@@ -111,10 +111,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             success(function(data, status, headers, config) {
                 var help = data[0];
                 alert(JSON.stringify(help));
-            }).
-            error(function(data, status, headers, config) {
-            alert("problem");
-        });
+            });
 
         angular.extend($scope, {
             sanfran: {
