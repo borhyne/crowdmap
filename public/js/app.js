@@ -111,11 +111,10 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $scope.help = []        
             $http.get('/contacts').success(function(data) {
                 for (var i = 0; i < data.length; i++){
-                    var link = document.write('<a href="#/contact/' + data[i]._id + '">'+ data[i].marker.placename + '</a>');
                     $scope.help.push({
                         lat: data[i].marker.lat,
                         lng: data[i].marker.lng,
-                        message: link,
+                        message: document.write('<a href="#/contact/' + data[i]._id + '">'+ data[i].marker.placename + '</a>'),
                         draggable: data[i].marker.draggable,
                         focus: data[i].marker.focus
                     })
