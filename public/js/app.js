@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        requestNumber = $http.points;
+        var requestNumber = $http.points;
 
         var testing = {
             "_id": {
