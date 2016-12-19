@@ -92,20 +92,18 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
 
         var testing = {
-            "_id": {
-                "$oid": "5855fa53942137001165e01c"
-            },
-                "marker": {
-                    "lat": 37.7798,
-                    "lng": -122.43598,
-                    "placename": "test",
-                    "message": "Drag me to add point!",
-                    "focus": true,
-                    "draggable": true,
-                    "description": "test",
-                    "url": "test",
-                    "entryname": "test",
-                    "time": "test"
+            "_id": "5855fa53942137001165e01c",
+            "marker":{
+                "lat": 37.7798,
+                "lng": -122.43598,
+                "placename": "test",
+                "message": "Drag me to add point!",
+                "focus": true,
+                "draggable": true,
+                "description": "test",
+                "url": "test",
+                "entryname": "test",
+                "time": "test"
                 }
             };
         alert(testing);
