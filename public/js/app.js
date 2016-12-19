@@ -110,10 +110,10 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $http.get('/contacts').
             success(function(data, status, headers, config) {
                 var help = data[0];
-                alert(JSON.stringify(help));
             });
 
         var pleasework = $http.get('/contacts');
+        alert(JSON.stringify(pleasework));
 
         angular.extend($scope, {
             sanfran: {
