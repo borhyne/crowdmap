@@ -91,7 +91,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        $http.contacts = contacts.data;
+        $http.Contacts1 = Contacts1.data;
 
         var testing = {
             "_id": {
