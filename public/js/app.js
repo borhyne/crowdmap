@@ -113,13 +113,15 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 alert(JSON.stringify(help));
             });
 
+        var pleasework = $http.get('/contacts');
+
         angular.extend($scope, {
             sanfran: {
                 lat: 37.77,
                 lng: -122.44,
                 zoom: 12
             },
-            markers: $http.get('/contacts')[0];,
+            markers: testing,
             position: {
                 lat: 37.77,
                 lng: -122.435
