@@ -109,14 +109,14 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         $http.get('/contacts').
             success(function(data, status, headers, config) {
-                return response.data[0];
+                return help.data[0];
                 alert(JSON.stringify(posts));
             }).
             error(function(data, status, headers, config) {
             alert("problem");
         });
 
-        alert(JSON.stringify(response));
+        alert(JSON.stringify(help));
 
         angular.extend($scope, {
             sanfran: {
