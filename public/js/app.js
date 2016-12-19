@@ -104,14 +104,25 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 "url": "test",
                 "entryname": "test",
                 "time": "test"
-                }
+                },
+
             };
 
         $http.get('/contacts').
             success(function(data) {
                 $scope.help = data[0];
-                alert(JSON.stringify(data))
+                alert(JSON.stringify(data.data.length))
             });
+
+        $scope.markers = []
+            $http.get('/contacts').then(function (responseData) {
+                for (var i = 0; i < responseData.data.length; i++){
+                    $scope.markers.push({
+                        lat: responseData.data[i].latitude,
+                        lng: responseData.data[i].longitude
+                    })
+                }
+            })
 
         angular.extend($scope, {
             sanfran: {
