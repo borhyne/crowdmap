@@ -115,7 +115,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                     $scope.help.push({
                         lat: data[i].marker.lat,
                         lng: data[i].marker.lng,
-                        message: "<a href = google.com>click here</a>",
+                        message: "<a href = /contacts>click here</a>",
                         draggable: data[i].marker.draggable,
                         focus: data[i].marker.focus
                     })
