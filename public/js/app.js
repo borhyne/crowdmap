@@ -91,8 +91,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        $scope.Contacts1 = Contacts1.data;
-
         var testing = {
             "_id": {
                 "$oid": "5855fa53942137001165e01c"
@@ -104,10 +102,10 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                     "message": "Drag me to add point!",
                     "focus": true,
                     "draggable": true,
-                    "description": "testte",
-                    "url": "tedrd",
-                    "entryname": "fdfxghbv",
-                    "time": "hcfc"
+                    "description": "test",
+                    "url": "test",
+                    "entryname": "test",
+                    "time": "test"
                 }
             };
 
@@ -117,7 +115,9 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: testing,
+            markers: function() {
+                return $scope.contacts = contacts.data
+            },
             position: {
                 lat: 37.77,
                 lng: -122.435
