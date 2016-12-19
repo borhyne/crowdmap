@@ -114,7 +114,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                     $scope.help.push({
                         lat: data[i].lat,
                         lng: data[i].lng
-                        alert(lng);
                     })
                 }
             });
