@@ -5,8 +5,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 templateUrl: "list.html",
                 controller: "ListController",
                 resolve: {
-                    contacts: function(Contacts1) {
-                        return Contacts1.getContacts();
+                    contacts: function(Contacts) {
+                        return Contacts.getContacts();
                     }
                 }
             })
@@ -26,7 +26,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 redirectTo: "/"
             })
     })
-    .service("Contacts1", function($http) {
+    .service("Contacts", function($http) {
         this.getContacts = function() {
             return $http.get("/contacts").
                 then(function(response) {
@@ -77,13 +77,13 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', function ($scope, $location, $http, Contacts1) {
+    .controller('MarkersSimpleController', function ($scope, $location, $http, Contacts) {
         $scope.back = function() {
             $location.path("#/contact");
         }
 
         $scope.saveContact = function(contact) {
-            Contacts1.createContact(contact).then(function(doc) {
+            Contacts.createContact(contact).then(function(doc) {
                 var contactUrl = "/contact/" + doc.data._id;
                 $location.path(contactUrl);
             }, function(response) {
@@ -146,8 +146,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         });
     })
 
-    .controller("EditContactController", function($scope, $routeParams, Contacts1) {
-        Contacts1.getContact($routeParams.contactId).then(function(doc) {
+    .controller("EditContactController", function($scope, $routeParams, Contacts) {
+        Contacts.getContact($routeParams.contactId).then(function(doc) {
             $scope.contact = doc.data;
         }, function(response) {
             alert(response);
@@ -164,12 +164,12 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         }
 
         $scope.saveContact = function(contact) {
-            Contacts1.editContact(contact);
+            Contacts.editContact(contact);
             $scope.editMode = false;
             $scope.contactFormUrl = "";
         }
 
         $scope.deleteContact = function(contactId) {
-            Contacts1.deleteContact(contactId);
+            Contacts.deleteContact(contactId);
         }
     });
