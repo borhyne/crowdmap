@@ -113,10 +113,10 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 for (var i = 0; i < data.length; i++){
                     $scope.help.push({
                         lat: data[i].lat,
-                        lng: data[i].lng,
+                        lng: data[i].lng
                     })
                 }
-            })
+            });
 
         angular.extend($scope, {
             sanfran: {
