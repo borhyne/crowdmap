@@ -116,7 +116,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 zoom: 12
             },
             markers: function() {
-                return $scope.contacts = contacts.data
+                return $http.get("/contacts");
             },
             position: {
                 lat: 37.77,
