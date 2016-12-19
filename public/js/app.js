@@ -105,6 +105,21 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 "entryname": "test",
                 "time": "test"
                 }
+            },
+            {
+            "_id": "5855fa53942137001165e01d",
+            "marker1":{
+                "lat": 37.779,
+                "lng": -122.435,
+                "placename": "test",
+                "message": "Drag me to add point!",
+                "focus": true,
+                "draggable": true,
+                "description": "test",
+                "url": "test",
+                "entryname": "test",
+                "time": "test"
+                }
             };
 
         $http.get('/contacts').
