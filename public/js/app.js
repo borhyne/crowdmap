@@ -95,9 +95,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             function() {
                 return $http.get("/contacts")
             };
-                
-
-
+            
         var testing = {
             "_id": {
                 "$oid": "5855fa53942137001165e01c"
@@ -122,7 +120,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.44,
                 zoom: 12
             },
-            markers: testing,
+            markers: requestNumber,
             position: {
                 lat: 37.77,
                 lng: -122.435
