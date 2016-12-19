@@ -91,8 +91,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             });
         }
 
-        $http.Contacts1 = Contacts1.data;
-
         var testing = {
             "_id": {
                 "$oid": "5855fa53942137001165e01c"
