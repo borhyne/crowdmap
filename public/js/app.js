@@ -107,6 +107,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 }
             };
 
+        var comeon = $http.get('/contacts');        
+
         $http.get('/contacts').
             success(function(data, status, headers, config) {
                 var posts = data[0];
