@@ -117,8 +117,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         $http.posts = Contacts1.data;
 
-        alert(JSON.stringify(posts, null, 4));
-
         angular.extend($scope, {
             sanfran: {
                 lat: 37.77,
