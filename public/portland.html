@@ -1,0 +1,47 @@
+<div class = "row" ng-hide="contact._id">
+  <div class="col-xs-12 col-md-8">
+    <leaflet lf-center="portland" event-broadcast="events" markers="help" height="400px" width="100%"></leaflet>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <div class="container-fluid">
+    <div>
+    <p>
+      <label>Latitude, Longitude:</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.marker.lat = position.lat">
+      <input id="name" class="form-control" type="text" ng-model="contact.marker.lng = position.lng">
+    </p>
+    <p>
+      <label>Name of Place *</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.marker.placename" required> 
+    </p>
+    <p>
+      <label>Why is this place awesome? *</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.marker.description" required> 
+    </p>
+    <p>
+      <label>Blog Link *</label> 
+      <input id="name" class="form-control" type="url" ng-model="contact.marker.url" required> 
+    </p>
+    <p>
+      <label>Tag:</label>
+    </p>
+    <p>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Outdoorsy"/>  Outdoorsy  </label>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Music"/>  Music  </label>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Drinking"/>  Drinking  </label>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Events"/>  Events  </label>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Secrets"/>  Secrets  </label>
+    </p>
+    <p>
+      <label>How long is the activity in hours?</label> 
+      <input id="name" class="form-control" type="number" min="0" max="12" ng-model="contact.marker.time">
+      <span ng-show="form.size.$error.integer">The value is not a valid integer!</span>
+      <span ng-show="form.size.$error.min || form.size.$error.max">The value must be in range 0 to 12 hours</span>
+    </p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Add New Point</button>
+    </p>
+    </div>
+    </div>
+  </div>
+</div>
