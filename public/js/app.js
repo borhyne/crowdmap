@@ -114,9 +114,9 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                     $scope.help.push({
                         lat: data[i].marker.lat,
                         lng: data[i].marker.lng,
-                        message: document.write('<a href="#/contact/' + data[i]._id + '">'+ data[i].marker.placename + '</a>'),
+                        message: data[i].marker.placename,
                         draggable: data[i].marker.draggable,
-                        focus: data[i].marker.focus
+                        focus: "true"
                     })
                 }
             });
