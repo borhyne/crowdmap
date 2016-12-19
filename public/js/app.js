@@ -131,7 +131,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             markers: testing,
             position: {
                 lat: 37.77,
-                lng: -122.435
+                lng: -123.435
             },
             events: { // or just {} //all events
                 markers:{
