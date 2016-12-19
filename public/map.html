@@ -20,15 +20,18 @@
     </p>
     <p>
       <label>Blog Link *</label> 
-      <input id="name" class="form-control" type="text" ng-model="contact.marker.url" required> 
+      <input id="name" class="form-control" type="url" ng-model="contact.marker.url" required> 
     </p>
     <p>
-      <label>Category?</label> 
-      <input id="name" class="form-control" type="text" ng-model="contact.marker.entryname"> 
+      <label>Tag:</label> 
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Outdoorsy"/>Outdoorsy</label>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Music"/>Music</label>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Drinking"/>Drinking</label>
+      <label><input id="name" class="form-control" type="radio" ng-model="contact.marker.entryname" value="Events"/>Events</label>
     </p>
     <p>
       <label>How long is the activity in hours?</label> 
-      <input id="name" class="form-control" type="text" ng-model="contact.marker.time">
+      <input id="name" class="form-control" type="number" ng-model="contact.marker.time">
     </p>
     <p>
       <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Add New Point</button>
@@ -37,3 +40,7 @@
     </div>
   </div>
 </div>
+
+ Gender: <label><input type="radio" ng-model="user.gender" value="male" />male</label>
+
+    <label><input type="radio" ng-model="user.gender" value="female" />female</label>
