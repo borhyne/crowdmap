@@ -106,7 +106,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 "time": "test"
                 }
             };
-        alert(testing);
 
         $http.get('/contacts').
             success(function(data, status, headers, config) {
@@ -116,6 +115,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             error(function(contact, status, headers, config) {
             alert("problem");
         });
+
+        alert(JSON.stringify(testing, null, 4)" "JSON.stringify(posts, null, 4));
 
         angular.extend($scope, {
             sanfran: {
