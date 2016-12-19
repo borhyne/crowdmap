@@ -111,7 +111,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $http.get('/contacts').
             success(function(data) {
                 $scope.help = data[0];
-                alert(JSON.stringify(data.data.length))
+                alert(JSON.stringify(data.data.length));
             });
 
         $scope.markers = []
