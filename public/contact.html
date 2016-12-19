@@ -9,7 +9,7 @@
 </div>
 <div ng-hide="editMode" class="container">
   <div>
-    <p ng-if="contact.marker.url">Link: {{ contact.marker.url }}</a></p>
+    <p ng-if="contact.marker.url">Link: <a href="{{ contact.marker.url }}"></a></p>
     <p ng-if="contact.marker.entryname">Entry person: {{ contact.marker.entryname }} </p>
     <p ng-if="contact.marker.time">Trip Length: {{ contact.marker.time }} hours</p>
     <p ng-if="contact.marker.lat"> lat: {{ contact.marker.lat }} </p>
