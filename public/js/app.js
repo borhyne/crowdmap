@@ -110,15 +110,15 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         var comeon = $http.get('/contacts');
         alert(JSON.stringify(comeon));
 
-        $http.get('/contacts').
+        var dammit = $http.get('/contacts').
             success(function(data, status, headers, config) {
-                var posts = data;
+                return data[0];
                 alert(JSON.stringify(posts));
             }).
             error(function(data, status, headers, config) {
             alert("problem");
         });
-            
+
         angular.extend($scope, {
             sanfran: {
                 lat: 37.77,
