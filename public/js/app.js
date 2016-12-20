@@ -118,7 +118,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 $http.get('http://ip-api.com/json').success(function(where) {
                     for (var i = 0; i < data.length; i++){
                         if data[i]._id = "5855fa53942137001165e01d";
-                            lat = where.lat
+                            lat = where.lat,
                             lng = where.lon
                         else;
                             lat = data[i].marker.lat,
