@@ -114,7 +114,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             };
 
         $scope.help = []        
-            $http.get('http://ip-api.com/json').success(function(where) {
+            $http.get('http://ip-api.com/json').then(function(where) {
                 $http.get('/contacts').success(function(data, where) {
                     for (var i = 0; i < data.length; i++){
                         $scope.help.push({
