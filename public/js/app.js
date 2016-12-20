@@ -113,8 +113,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
             };
 
-        $http.get('http://ip-api.com/json').success(alert(data););
-
         $scope.help = []
             $http.get('/contacts').success(function(data) {
                 for (var i = 0; i < data.length; i++){ 
