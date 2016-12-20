@@ -120,6 +120,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                         if (data[i]._id == "5855fa53942137001165e01d"){
                             var lat = where.lat;
                             var lng = where.lon;
+                            alert(lng);
                         }
                         else {
                             var lat = data[i].marker.lat;
