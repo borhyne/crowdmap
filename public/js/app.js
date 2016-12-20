@@ -114,18 +114,16 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             };
 
         $scope.help = []        
-            $http.get('http://ip-api.com/json').then(function(where) {
-                $http.get('/contacts').success(function(data, where) {
-                    for (var i = 0; i < data.length; i++){
-                        $scope.help.push({
-                            lat: data[i].lat,
-                            lng: data[i].lng,
-                            message: "<a href=#/contact/"+data[i]._id+">"+data[i].marker.placename+"</a>",
-                            draggable: data[i].draggable,
-                            focus: data[i].focus
-                        })
-                    }
-                });
+            $http.get('/contacts').success(function(data, where) {
+                for (var i = 0; i < data.length; i++){
+                    $scope.help.push({
+                        lat: data[i].marker.lat,
+                        lng: data[i].marker.lng,
+                        message: "<a href=#/contact/"+data[i]._id+">"+data[i].marker.placename+"</a>",
+                        draggable: data[i].draggable,
+                        focus: data[i].focus
+                    })
+                }
             });
 
         angular.extend($scope, {
