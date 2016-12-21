@@ -81,7 +81,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })    
-    .controller('MarkersSimpleController', function ($scope, $location, $http, Contacts) {
+    .controller('MarkersSimpleController', [ '$scope', function ($scope, $location, $http, Contacts) {
         $scope.back = function() {
             $location.path("#/contact");
         }
@@ -94,24 +94,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 alert(response);
             });
         }
-
-        var testing = {
-            "_id": "5855fa53942137001165e01c",
-            "marker":{
-                "lat": 37.7798
-                ,
-                "lng": -122.43598,
-                "placename": "test",
-                "message": "Drag me to add point!",
-                "focus": true,
-                "draggable": true,
-                "description": "test",
-                "url": "test",
-                "entryname": "test",
-                "time": "test"
-                },
-
-            };
 
         $scope.help = []
             $http.get('/contacts').success(function(data) {
