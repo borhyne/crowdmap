@@ -14,7 +14,7 @@
     <p ng-if="contact.marker.time">Trip Length: {{ contact.marker.time }} hours</p>
     <p ng-if="contact.marker.lat">Go on google maps: <a ng-href="http://www.google.com/maps/place/{{ contact.marker.lat }},{{ contact.marker.lng }}" target="_blank">Click here to open location in Google Maps</a></p>
     <p>
-      <a style="margin-top:20px" class="btn btn-default" href="#/">Back to Map</a>
+      <a style="margin-top:20px" class="btn btn-default" href="javascript:history.back()">Back to Map</a>
     </p>
   </div>
 </div>
