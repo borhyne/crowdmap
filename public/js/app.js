@@ -112,7 +112,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $scope.$on("centerUrlHash", function(event, centerHash) {
             console.log("url", centerHash);
             $location.search({ c: centerHash });
-            alert(centerHash);
+            // need to add function here to take centerHash and convert it to a marker
         });
 
         $scope.changeLocation = function(centerHash) {
@@ -128,6 +128,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             portland: {
                 lat: 45.5425,
                 lng: -122.7945,
+                message: "come to portland",
                 zoom: 10
             },
             position: {
