@@ -1,6 +1,14 @@
 <div class = "row" ng-hide="contact._id">
   <div class="col-xs-12 col-md-8">
     <leaflet lf-center="sanfran" event-broadcast="events" markers="help" height="400px" width="100%"></leaflet>
+    <h1>Center autodiscover example</h1>
+    <ul>
+        <li><input type="number" step="any" ng-model="center.lat" /> Latitude</li>
+        <li><input type="number" step="any" ng-model="center.lng" /> Longitude</li>
+        <li><input type="number" step="any" ng-model="center.zoom" /> Zoom</li>
+    </ul>
+
+    <button ng-click="center.autoDiscover=true">Discover position</button>
   </div>
   <div class="col-xs-12 col-md-4">
     <div class="container-fluid">
