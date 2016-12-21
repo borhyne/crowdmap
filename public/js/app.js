@@ -134,7 +134,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             $scope.position.lat = args.model.lat;
             $scope.position.lng = args.model.lng;
         });
-    })
+    }])
 
     .controller("EditContactController", function($scope, $routeParams, Contacts) {
         Contacts.getContact($routeParams.contactId).then(function(doc) {
