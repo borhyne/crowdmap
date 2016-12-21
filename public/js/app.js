@@ -129,7 +129,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lat: 45.5425,
                 lng: -122.7945,
                 message: "come to portland",
-                zoom: 10
+                focus: false,
+                draggable: false
             },
             position: {
                 lat: 37.77,
