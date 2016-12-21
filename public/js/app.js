@@ -112,6 +112,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $scope.$on("centerUrlHash", function(event, centerHash) {
             console.log("url", centerHash);
             $location.search({ c: centerHash });
+            alert(centerHash);
         });
 
         $scope.changeLocation = function(centerHash) {
