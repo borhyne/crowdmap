@@ -108,6 +108,16 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 }
             });
 
+
+        $scope.$on("centerUrlHash", function(event, centerHash) {
+            console.log("url", centerHash);
+            $location.search({ c: centerHash });
+        });
+
+        $scope.changeLocation = function(centerHash) {
+            $location.search({ c: centerHash });
+        };
+
         angular.extend($scope, {
             sanfran: {
                 autoDiscover: true, zoom: 8
