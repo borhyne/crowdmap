@@ -128,7 +128,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
 
         angular.extend($scope, {
             sanfran: {
-                autoDiscover: true
+                autoDiscover: true, zoom: 8
             },
             portland: {
                 lat: 45.5425,
