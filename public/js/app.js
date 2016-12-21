@@ -117,7 +117,6 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lng: -122.7945,
                 zoom: 10
             },
-            markers: testing,
             position: {
                 lat: 37.77,
                 lng: -140.435
