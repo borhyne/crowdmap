@@ -3,7 +3,7 @@
       <div class="form-inline">
         <label>Search here to go to a new place:</label> 
         <input id="name" class="form-control" type="text" ng-click ="bounds.address"><button type="submit" class="btn btn-primary">Submit</button>
-        <pre>{{bounds}}</pre>
+        <pre>{{bounds.address}}</pre>
         
       </div>
     <leaflet bounds = "bounds" lf-center="sanfran" url-hash-center="yes" event-broadcast="events" markers="help" height="400px" width="100%"></leaflet>
