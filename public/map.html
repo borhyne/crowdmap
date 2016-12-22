@@ -1,6 +1,8 @@
 <div class = "row" ng-hide="contact._id">
   <div class="col-xs-12 col-md-8">
-    <leaflet lf-center="sanfran" url-hash-center="yes" event-broadcast="events" markers="help" height="400px" width="100%"></leaflet>
+    <input type="button" value="Bath, UK" ng-click="bounds.address='Bath, UK'" />
+    <leaflet bounds = "bounds" lf-center="sanfran" url-hash-center="yes" event-broadcast="events" markers="help" height="400px" width="100%"></leaflet>
+    <pre ng-bind="bounds|json"></pre>
     <button style="margin-top:20px" class="btn btn-default" ng-click="changeLocation('37.7578,-122.5076:10')">San Francisco</button>
     <button style="margin-top:20px" class="btn btn-default" ng-click="changeLocation('-8.4560:115.0506:8')">Bali, Indonesia</button>
     <button style="margin-top:20px" class="btn btn-default" ng-click="changeLocation('45.5426:-122.7945:8')">Portland</button>

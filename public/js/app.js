@@ -120,10 +120,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         };
 
         angular.extend($scope, {
-            sanfran: {
-                lat: 37.7360,
-                lng: -122.3987,
-                zoom: 10
+            bounds: {
+                address: 'San Francisco, CA'
             },
             portland: {
                 lat: 45.5425,
