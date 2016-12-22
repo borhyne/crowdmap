@@ -119,6 +119,15 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
             $location.search({ c: centerHash });
         };
 
+        $scope.list = [];
+        $scope.text = 'hello';
+        $scope.submit = function() {
+            if ($scope.text) {
+                $scope.list.push(this.text);
+                $scope.text = '';
+            }
+        };
+
         angular.extend($scope, {
             sanfran: {
                 lat: 37.7360,
