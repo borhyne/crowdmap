@@ -123,10 +123,8 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $scope.text = 'hello';
         $scope.submit = function() {
             if ($scope.text) {
-                $scope.bounds.address = '';
                 $scope.list.push(this.text);
                 $scope.text = '';
-
             }
         };
 

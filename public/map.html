@@ -6,17 +6,8 @@
         <input type="text" ng-model="text" name="text" />
         <input type="submit" id="submit" value="Submit" />
         <pre>{{list}}</pre>
-      </form>
-
-
-
-
-      <div class="form-inline">
-        <label>Search here to go to a new place:</label> 
-        <input id="name" class="form-control" type="text" ng-click ="bounds.address"><button type="submit" class="btn btn-primary">Submit</button>
         <pre>{{bounds.address}}</pre>
-        
-      </div>
+      </form>\
     <leaflet bounds = "bounds" lf-center="sanfran" url-hash-center="yes" event-broadcast="events" markers="help" height="400px" width="100%"></leaflet>
     <button style="margin-top:20px" class="btn btn-default" ng-click="changeLocation('37.7578,-122.5076:10')">San Francisco</button>
     <button style="margin-top:20px" class="btn btn-default" ng-click="changeLocation('-8.4560:115.0506:8')">Bali, Indonesia</button>
