@@ -124,9 +124,9 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $scope.bounds.address = 'San Francisco, CA';
         $scope.submit = function() {
             if ($scope.text) {
-                //$scope.bounds.address = '';
+                $scope.bounds.address = '';
                 $scope.list.push(this.text);
-                //$scope.bounds.address.push(this.text);
+                $scope.bounds.address = text;
                 $scope.text = '';
 
             }
@@ -137,6 +137,9 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
                 lat: 37.7360,
                 lng: -122.3987,
                 zoom: 10
+            },
+            bounds: {
+                address: 'San Francisco, CA'
             },
             portland: {
                 lat: 45.5425,
