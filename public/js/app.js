@@ -120,7 +120,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         };
 
         $scope.list = [];
-        $scope.text = 'hello';
+        $scope.text = '';
         $scope.submit = function() {
             if ($scope.text) {
                 $scope.list.push(this.text);
