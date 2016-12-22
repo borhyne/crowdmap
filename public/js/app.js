@@ -124,7 +124,7 @@ angular.module("contactsApp", ['ngRoute','ui-leaflet'])
         $scope.submit = function() {
             if ($scope.text) {
                 $scope.list.push(this.text);
-                $scope.bounds.address = text;
+                $scope.bounds.address = 'North Carolina';
                 $scope.text = '';
             }
         };
