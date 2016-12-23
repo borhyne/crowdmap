@@ -1,7 +1,11 @@
 {
   "name": "MEAN Group Travel",
   "description": "A MEAN app that allows users to crowdsource travel.",
+<<<<<<< HEAD
   "repository": "https://github.com/borhyne/crowdmap",
+=======
+  "repository": "",
+>>>>>>> parent of a1a94b2... Update app.json
   "logo": "http://smashinghub.com/wp-content/uploads/2012/10/Vector-World-Map-17.jpg",
   "keywords": ["node", "express", "angular", "MEAN", "mongodb", "REST", "API"],
   "addons": ["mongolab"]
